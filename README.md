@@ -10,4 +10,6 @@
 * 프로젝트 생성 및 프로젝트 타겟 설정
   * iOS Deploymnet Target 14.0
   * 다크모드 지원 끄기
-  * 파일 정리
+  * 앱 아이콘 및 런치스크린 설정 / 이미지 출처: https://www.flaticon.com/
+
+* 레이아웃 구성 및 weather api 발급, 파일 정리
