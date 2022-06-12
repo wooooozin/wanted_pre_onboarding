@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		367A27102855D9EF00BDEB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A270F2855D9EF00BDEB85 /* AppDelegate.swift */; };
 		367A27122855D9EF00BDEB85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A27112855D9EF00BDEB85 /* SceneDelegate.swift */; };
-		367A27142855D9EF00BDEB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A27132855D9EF00BDEB85 /* ViewController.swift */; };
+		367A27142855D9EF00BDEB85 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A27132855D9EF00BDEB85 /* MainViewController.swift */; };
 		367A27172855D9EF00BDEB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367A27152855D9EF00BDEB85 /* Main.storyboard */; };
 		367A271A2855D9EF00BDEB85 /* OpenWeatherByWOOJIN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 367A27182855D9EF00BDEB85 /* OpenWeatherByWOOJIN.xcdatamodeld */; };
 		367A271C2855D9F200BDEB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367A271B2855D9F200BDEB85 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		367A270C2855D9EF00BDEB85 /* OpenWeatherByWOOJIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherByWOOJIN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367A270F2855D9EF00BDEB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367A27112855D9EF00BDEB85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		367A27132855D9EF00BDEB85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		367A27132855D9EF00BDEB85 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		367A27162855D9EF00BDEB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		367A27192855D9EF00BDEB85 /* OpenWeatherByWOOJIN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenWeatherByWOOJIN.xcdatamodel; sourceTree = "<group>"; };
 		367A271B2855D9F200BDEB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,16 +58,40 @@
 		367A270E2855D9EF00BDEB85 /* OpenWeatherByWOOJIN */ = {
 			isa = PBXGroup;
 			children = (
+				367A27262855E8F500BDEB85 /* Source */,
 				367A270F2855D9EF00BDEB85 /* AppDelegate.swift */,
 				367A27112855D9EF00BDEB85 /* SceneDelegate.swift */,
-				367A27132855D9EF00BDEB85 /* ViewController.swift */,
-				367A27152855D9EF00BDEB85 /* Main.storyboard */,
 				367A271B2855D9F200BDEB85 /* Assets.xcassets */,
 				367A271D2855D9F200BDEB85 /* LaunchScreen.storyboard */,
 				367A27202855D9F200BDEB85 /* Info.plist */,
 				367A27182855D9EF00BDEB85 /* OpenWeatherByWOOJIN.xcdatamodeld */,
 			);
 			path = OpenWeatherByWOOJIN;
+			sourceTree = "<group>";
+		};
+		367A27262855E8F500BDEB85 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				367A27152855D9EF00BDEB85 /* Main.storyboard */,
+				367A27132855D9EF00BDEB85 /* MainViewController.swift */,
+				367A27272855E90100BDEB85 /* DataManager */,
+				367A27282855E91000BDEB85 /* Response */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		367A27272855E90100BDEB85 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		367A27282855E91000BDEB85 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367A27142855D9EF00BDEB85 /* ViewController.swift in Sources */,
+				367A27142855D9EF00BDEB85 /* MainViewController.swift in Sources */,
 				367A27102855D9EF00BDEB85 /* AppDelegate.swift in Sources */,
 				367A271A2855D9EF00BDEB85 /* OpenWeatherByWOOJIN.xcdatamodeld in Sources */,
 				367A27122855D9EF00BDEB85 /* SceneDelegate.swift in Sources */,
@@ -220,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
