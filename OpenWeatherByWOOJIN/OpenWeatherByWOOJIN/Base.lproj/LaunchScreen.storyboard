@@ -17,19 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-app" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-QW-NbA">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lanch" translatesAutoresizingMaskIntoConstraints="NO" id="sVM-T2-crJ">
+                                <rect key="frame" x="111" y="352" width="192" height="192"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="51k-vn-5XU"/>
-                                    <constraint firstAttribute="width" constant="240" id="go4-6f-LGs"/>
+                                    <constraint firstAttribute="width" secondItem="sVM-T2-crJ" secondAttribute="height" multiplier="1:1" id="MbB-Gn-xOW"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W3h-QW-NbA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1Xl-0A-Ccn"/>
-                            <constraint firstItem="W3h-QW-NbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NED-yN-vj9"/>
+                            <constraint firstItem="sVM-T2-crJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="d33-cG-UMd"/>
+                            <constraint firstItem="sVM-T2-crJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mW7-We-kRA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="weather-app" width="512" height="512"/>
+        <image name="lanch" width="192" height="192"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

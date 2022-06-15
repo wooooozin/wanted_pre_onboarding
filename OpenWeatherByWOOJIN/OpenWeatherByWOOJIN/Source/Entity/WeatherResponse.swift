@@ -11,13 +11,16 @@ struct WeatherResponse: Codable {
     let weather: [Weather]
     let main: Main
     let wind: Wind
+    let sys: Sys
     let name: String? // 도시이름
     let cod: Int?
+    let timezone: Date?
+    let visibility: Int?
 }
 
 struct Weather: Codable {
     let id: Int?
-    let main: String?
+    let main: String? // 현재날씨
     let description: String? // 날씨설명
     let icon: String? // 날씨 아이콘
 }
@@ -36,3 +39,7 @@ struct Wind: Codable {
     let deg: Int?
 }
 
+struct Sys: Codable {
+    let sunrise: Date?
+    let sunset: Date?
+}

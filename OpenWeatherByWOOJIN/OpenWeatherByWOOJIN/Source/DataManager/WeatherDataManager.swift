@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 enum NetworkError: Error {
     case badUrl
     case noData
@@ -28,7 +29,6 @@ class WeatherDataManager {
             let weatherResponse = try? JSONDecoder().decode(WeatherResponse.self, from: data)
             
             if let weatherResponse = weatherResponse {
-                print(weatherResponse)
                 completion(.success(weatherResponse))
             } else {
                 completion(.failure(.decodingError))
@@ -36,4 +36,27 @@ class WeatherDataManager {
         }
         .resume()
     }
+    
+    func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void) {
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        
+        if let hasURL = URL(string: urlString) {
+            var request = URLRequest(url: hasURL)
+            request.httpMethod = "GET"
+            
+            session.dataTask(with: request) { data, response, error in
+//                print((response as! HTTPURLResponse).statusCode)
+
+                if let hasData = data {
+                  completion(UIImage(data: hasData))
+                    return
+                }
+            }
+            .resume()
+            session.finishTasksAndInvalidate()
+        }
+        completion(nil)
+    }
+
 }

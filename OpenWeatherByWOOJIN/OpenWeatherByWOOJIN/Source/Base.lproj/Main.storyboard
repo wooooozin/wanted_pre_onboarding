@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NpR-08-Sj8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,16 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rY4-Sw-be9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rY4-Sw-be9">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SxX-jL-98a">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Kgs-uO-xZq"/>
+                                    <constraint firstAttribute="height" constant="50" id="Pgl-aq-3L3"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rY4-Sw-be9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ffp-9e-DNN"/>
+                            <constraint firstItem="SxX-jL-98a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KuZ-ic-HIn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rY4-Sw-be9" secondAttribute="bottom" id="M3K-4v-FLh"/>
+                            <constraint firstItem="SxX-jL-98a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UBV-yC-h1B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rY4-Sw-be9" secondAttribute="trailing" id="aGs-Xv-aXX"/>
                             <constraint firstItem="rY4-Sw-be9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ab2-1z-RKi"/>
                         </constraints>
@@ -34,6 +42,7 @@
                     <navigationItem key="navigationItem" title="날씨" id="G9y-K1-GbE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="indicatorView" destination="SxX-jL-98a" id="aXX-rj-n35"/>
                         <outlet property="weatherTableView" destination="rY4-Sw-be9" id="Cmy-tV-Z97"/>
                     </connections>
                 </viewController>
