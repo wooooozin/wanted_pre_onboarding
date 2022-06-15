@@ -34,6 +34,4 @@
 * 두번째 페이지
   * 선택한 도시의 날씨, 현재기온, 체감기온, 헌재습도, 최저기온, 최고기온, 기압, 풍속, 간단한 날씨 정보, 일출, 일몰, 가시거리 를 확인할 수 있습니다.
 
-![1](https://user-images.githubusercontent.com/95316662/173797132-868a7ad3-19ec-4338-9b62-7406921c4ec9.png)
-![2](https://user-images.githubusercontent.com/95316662/173797143-e9e63382-1cbf-4f5b-a717-224c1efc72e4.png)
-![3](https://user-images.githubusercontent.com/95316662/173797154-071ae5ac-4783-4a95-9f46-642c9839a904.png)
+
